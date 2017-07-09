@@ -1,11 +1,7 @@
-<section class="grafana-metric-options">
-	<div class="gf-form-group">
-		<div class="gf-form-inline">
-			<div class="gf-form">
-				<span class="gf-form-label"><i class="fa fa-wrench"></i></span>
-				<span class="gf-form-label width-11">Condition time</span>
-				<input type="text" class="gf-form-input width-16" ng-model="ctrl.panelCtrl.panel.metaQuery" ng-blur="ctrl.panelCtrl.refresh();" spellcheck='false' placeholder="3600s">
-			</div>
-		</div>
-	</div>
+<section class="gf-form-group">
+  <div class="gf-form-inline">
+    <div class="gf-form max-width-15">
+      <gf-form-switch class="gf-form" label="Target Repeat" label-class="width-5" checked="ctrl.panelCtrl.panel.targetRepeat" on-change="ctrl.panelCtrl.refresh()"></gf-form-switch>
+    </div>
+  </div>
 </section>
