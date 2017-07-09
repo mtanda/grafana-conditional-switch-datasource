@@ -1,0 +1,16 @@
+<query-editor-row query-ctrl="ctrl" can-collapse="false">
+  <div class="gf-form-inline">
+    <div class="gf-form gf-form--grow">
+      <label class="gf-form-label width-8">Condition</label>
+      <input type="text" class="gf-form-input" ng-model="ctrl.target.condition" spellcheck='false' data-min-length=0 data-items=100 ng-model-onblur ng-change="ctrl.refreshMetricData()">
+    </div>
+    <div class="gf-form max-width-22">
+      <label class="gf-form-label width-8">Datasource</label>
+      <ul class="dropdown-menu" role="menu">
+        <li ng-repeat="datasource in datasources" role="menuitem" ng-hide="datasource.meta.builtIn">
+          <a>{{datasource.name}}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</query-editor-row>
