@@ -29,4 +29,8 @@ export class ConditionalSwitchDatasource {
       return { data: _.flatten(_.map(results, 'data')) };
     });
   }
+
+  testDatasource() {
+    return this.q.when({ status: "success", message: "Data source is working", title: "Success" });
+  }
 }
