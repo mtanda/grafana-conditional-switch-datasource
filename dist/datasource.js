@@ -69,6 +69,11 @@ System.register(['lodash'], function (_export, _context) {
               return { data: _.flatten(_.map(results, 'data')) };
             });
           }
+        }, {
+          key: 'testDatasource',
+          value: function testDatasource() {
+            return this.q.when({ status: "success", message: "Data source is working", title: "Success" });
+          }
         }]);
 
         return ConditionalSwitchDatasource;
