@@ -31,6 +31,6 @@ export class ConditionalSwitchDatasource {
   }
 
   testDatasource() {
-    return this.q.when({ status: "success", message: "Data source is working", title: "Success" });
+    return this.$q.when({ status: "success", message: "Data source is working", title: "Success" });
   }
 }
