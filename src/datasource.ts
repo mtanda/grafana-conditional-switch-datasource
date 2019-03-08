@@ -1,6 +1,11 @@
 import _ from 'lodash';
 
 export class ConditionalSwitchDatasource {
+  instanceSettings: any;
+  $q: any;
+  datasourceSrv: any;
+  templateSrv: any;
+
   constructor(instanceSettings, $q, datasourceSrv, templateSrv) {
     this.instanceSettings = instanceSettings;
     this.$q = $q;
@@ -17,7 +22,7 @@ export class ConditionalSwitchDatasource {
       }
 
       return this.datasourceSrv.get(dsName).then(ds => {
-        let dsName = this.templateSrv.replace('$ds_'+ ds.type, options.scopedVars);
+        let dsName = this.templateSrv.replace('$ds_' + ds.type, options.scopedVars);
         return this.datasourceSrv.get(dsName).then(ds => {
           let opt = angular.copy(options);
           return ds.query(opt);
